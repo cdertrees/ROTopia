@@ -12,19 +12,18 @@ SHORT TERM GOALS:
  - Decide Dances
  - Player Character
  - Area 1
-	- Objects
 	- Ground
 THIS WEEK'S GOALS:
 - Pitch Presentation
   	- Map
-  	- # of Scenes
+  	- # of Scenes (Area 1 + 3 Subscenes (Houses), Area 2 + 1 Subscene, Area 3 + 2 Subscenes (Partner Plunge and Ticket Booth))
   	- Clay examples
   	- In-Engine screenshots
  HOPE:
- -
+ - Movement (WITH LERPING LAG, to accommodate walking anim)
  ZACH:
- -
+ - Re-photograph with real Camera
  CAITLIN:
- -
+ - Bring Wire, Chat Function (Read Emotes)
  CONNOR:
- -
+ - Edit Zach's Photos
