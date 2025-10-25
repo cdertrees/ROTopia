@@ -2,11 +2,18 @@ NEVER HAPPENING GOALS:
  -
  -
 LONG TERM GOALS:
- -
- -
+ - Narrative
+ - Areas 2 and 3
+ - Animate Dances
 SHORT TERM GOALS:
- -
- -
+ - Implement Gradient Map Shaders and Pickers
+ - Figure Out Isometric Camera in Unity
+ - Get Clay implemented in-engine
+ - Decide Dances
+ - Player Character
+ - Area 1
+	- Objects
+	- Ground
 THIS WEEK'S GOALS:
 - Pitch Presentation
   	- Map
