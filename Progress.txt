@@ -5,6 +5,7 @@ LONG TERM GOALS:
  - Narrative
  - Areas 2 and 3
  - Animate Dances
+ - Create Clay UI
 SHORT TERM GOALS:
  - Implement Gradient Map Shaders and Pickers
  - Figure Out Isometric Camera in Unity
