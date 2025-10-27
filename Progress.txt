@@ -7,6 +7,7 @@ LONG TERM GOALS:
  - Animate Dances
  - Create Clay UI
 SHORT TERM GOALS:
+ - Figure out Sprite layer sorting
  - Get Clay implemented in-engine
  - Decide Dances
  - Player Character
@@ -20,17 +21,22 @@ THIS WEEK'S GOALS:
   	- In-Engine screenshots
  HOPE:
  - Movement (WITH LERPING LAG, to accommodate walking anim)
-	HOPE DONE:
-		- Figure Out Isometric Camera in Unity
+	
+		
  ZACH:
- - Re-photograph with real Camera
+ 
+
  CAITLIN:
  - Bring Wire (Tuesday)
- - Player Play Emotes, NPC Read Emotes (Waiting on Hope) (don't actually need animations rn, just placeholders)
-	CAITLIN DONE 8-): 
-		- Implement Gradient Map Shaders and Pickers
-		- Chat Function (Read Emotes)
+ - Player Play Emotes, NPC Read Emotes (don't actually need animations rn, just placeholders)
+	
+		
  CONNOR:
- - Edit Zach's Photos
 
 
+DONE 8-): 
+- Figure Out Isometric Camera in Unity
+- Implement Gradient Map Shaders and Pickers
+- Chat Function (Read Emotes)
+- Re-photograph Area 1 with real Camera
+- Edit Zach's Photos
