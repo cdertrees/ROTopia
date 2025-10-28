@@ -39,6 +39,7 @@ public class Chatbox : MonoBehaviour
     {
         //will replace w unity input system. unsure if i need to wait for hope's stuff to come in first
         //if i press enter, have the text field selected, and it is not empty
+      
         if (Input.GetKeyDown(KeyCode.Return) &&
             EventSystem.current.currentSelectedGameObject.name==_chatInput.gameObject.name &&
             _chatInput.text != "")
@@ -46,14 +47,16 @@ public class Chatbox : MonoBehaviour
            //grab chat input submission
             var textInput = _chatInput.text;
             var validEmote = false;
+            var emoteNum = "";
             
             //go through list of emotes, if any are valid then we are good to go!
-            foreach (var str in emotes)
+            for (int i = 0; i < emotes.Length; i++)
             {
                 //if the current emote is valid stop looking
-                if (textInput == "/"+str)
+                if (textInput == "/"+emotes[i])
                 {
                     validEmote = true;
+                    emoteNum = i.ToString();
                     break;
                 }
                 
@@ -64,6 +67,8 @@ public class Chatbox : MonoBehaviour
             {
                 //get rid of the \
                 PushChatMessage("This guy hitting the "+ textInput.Substring(1, textInput.Length-1) +"!!!!!!");
+                GameManager.GM._emoteScript.Emote("Emote"+emoteNum);
+                
                 //play emote from player's animator which doesnt exist yet
             }
             //if not inform the player

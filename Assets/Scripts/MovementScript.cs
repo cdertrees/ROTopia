@@ -51,7 +51,10 @@ public class MovementScript : MonoBehaviour
       //Then it sets the boolean to true or false depending on that
       
       //To check if I fucked up
-      Debug.Log(value.Get<float>());
+      
+      //sorry hope i commented out your debug logs it was driving me cray
+      // Debug.Log(value.Get<float>());
+      
       if (value.Get<float>() > 0)
       {
          _controlLeft = true;
@@ -63,7 +66,7 @@ public class MovementScript : MonoBehaviour
    }
    void OnMoveRight(InputValue value)
    {
-      Debug.Log(value.Get<float>());
+      // Debug.Log(value.Get<float>());
       if (value.Get<float>() > 0)
       {
          _controlRight = true;
@@ -75,7 +78,7 @@ public class MovementScript : MonoBehaviour
    }
    void OnMoveUp(InputValue value)
    {
-      Debug.Log(value.Get<float>());
+      // Debug.Log(value.Get<float>());
       if (value.Get<float>() > 0)
       {
          _controlUp = true;
@@ -87,7 +90,7 @@ public class MovementScript : MonoBehaviour
    }
    void OnMoveDown(InputValue value)
    {
-      Debug.Log(value.Get<float>());
+      // Debug.Log(value.Get<float>());
       if (value.Get<float>() > 0)
       {
          _controlDown = true;
