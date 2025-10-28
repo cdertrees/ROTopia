@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
     
     //Player Emote
     public EmoteScript _emoteScript;
-    
+    public DialogueBox _dialogueScript;
     private void Awake()
     {
         //If you are not me kill yourself!!!!!
