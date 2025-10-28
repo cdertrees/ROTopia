@@ -17,7 +17,7 @@ public class MovementScript : MonoBehaviour
       
       //The original 
       //Used to slow down movement by making it check every few frames instead of every frame
-      if (_frameCount % 3 == 0)
+      if (_frameCount % 3 == 0 && GameManager.GM.canMove)
       {
          //If the player is holding down a direction, move the character in that direction
          

@@ -1,12 +1,20 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager GM { get; private set; }
+
+    //GM Variables - Sources of truth for the whole game.
     
-    //Player Emote
-    public EmoteScript _emoteScript;
-    public DialogueBox _dialogueScript;
+    //decides player is actively exploring the map
+    public bool canMove = true;
+    
+    //Scripts
+    public MovementScript movementScript;
+    public EmoteScript emoteScript;
+    public DialogueBox dialogueScript;
+
     private void Awake()
     {
         //If you are not me kill yourself!!!!!
@@ -18,11 +26,14 @@ public class GameManager : MonoBehaviour
         {
             GM = this;
         }
+
     }
 
-    // Update is called once per frame
-    void Update()
+    //disable player movement. this will happen whenever the player is interacting with an npc or is typing in the chat box
+    public void SetCanMove(bool val)
     {
-        
+        canMove = val;
     }
+    
+    
 }

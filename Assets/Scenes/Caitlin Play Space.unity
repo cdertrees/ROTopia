@@ -1780,7 +1780,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   emotes:
   - schlibby
-  - poobert
+  - poobis
   - marmadizzle
 --- !u!1 &741297238
 GameObject:
@@ -4808,8 +4808,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84cb7a9168065c440bb6bf742da1ad8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
-  _emoteScript: {fileID: 1333172434}
-  _dialogueScript: {fileID: 1753758459}
+  canMove: 1
+  movementScript: {fileID: 0}
+  emoteScript: {fileID: 0}
+  dialogueScript: {fileID: 0}
 --- !u!1 &1487952195
 GameObject:
   m_ObjectHideFlags: 0

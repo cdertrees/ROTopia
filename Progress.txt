@@ -6,8 +6,10 @@ LONG TERM GOALS:
  - Areas 2 and 3
  - Animate Dances
  - Create Clay UI
-SHORT TERM GOALS:
  - Figure out Sprite layer sorting
+ 
+
+SHORT TERM GOALS:
  - Get Clay implemented in-engine
  - Decide Dances
  - Player Character
@@ -27,8 +29,8 @@ THIS WEEK'S GOALS:
  
 
  CAITLIN:
- - Bring Wire (Tuesday)
- - Make it so players can't move when in the chat box (TALK TO HOPE BEFORE TOUCHING THEIR SHIT) 
+ - Bring Wire (WED.)
+
 
 	
 		
@@ -42,3 +44,4 @@ DONE 8-):
 - Re-photograph Area 1 with real Camera
 - Edit Zach's Photos
  - Player Play Emotes, NPC Read Emotes (don't actually need animations rn, just placeholders)
+ - Make it so players can't move when in the chat box (TALK TO HOPE BEFORE TOUCHING THEIR SHIT) 

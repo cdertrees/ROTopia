@@ -37,48 +37,58 @@ public class Chatbox : MonoBehaviour
 
     public void Update()
     {
-        //will replace w unity input system. unsure if i need to wait for hope's stuff to come in first
-        //if i press enter, have the text field selected, and it is not empty
-      
-        if (Input.GetKeyDown(KeyCode.Return) &&
-            EventSystem.current.currentSelectedGameObject.name==_chatInput.gameObject.name &&
-            _chatInput.text != "")
+        
+        if ( EventSystem.current.currentSelectedGameObject != null)
         {
-           //grab chat input submission
-            var textInput = _chatInput.text;
-            var validEmote = false;
-            var emoteNum = "";
-            
-            //go through list of emotes, if any are valid then we are good to go!
-            for (int i = 0; i < emotes.Length; i++)
+            GameManager.GM.SetCanMove(false);
+            //will replace w unity input system. unsure if i need to wait for hope's stuff to come in first
+            //if i press enter, have the text field selected, and it is not empty
+            if (Input.GetKeyDown(KeyCode.Return) &&
+                EventSystem.current.currentSelectedGameObject.name==_chatInput.gameObject.name &&
+                _chatInput.text != "")
             {
-                //if the current emote is valid stop looking
-                if (textInput == "/"+emotes[i])
+                //grab chat input submission
+                var textInput = _chatInput.text;
+                var validEmote = false;
+                var emoteNum = "";
+            
+                //go through list of emotes, if any are valid then we are good to go!
+                for (int i = 0; i < emotes.Length; i++)
                 {
-                    validEmote = true;
-                    emoteNum = i.ToString();
-                    break;
+                    //if the current emote is valid stop looking
+                    if (textInput == "/"+emotes[i])
+                    {
+                        validEmote = true;
+                        emoteNum = i.ToString();
+                        break;
+                    }
+                
                 }
+            
+                //if emote is valid start emoting 
+                if (validEmote)
+                {
+                    //get rid of the \
+                    PushChatMessage("This guy hitting the "+ textInput.Substring(1, textInput.Length-1) +"!!!!!!");
+                    GameManager.GM.emoteScript.Emote("Emote"+emoteNum);
                 
-            }
-            
-            //if emote is valid start emoting 
-            if (validEmote)
-            {
-                //get rid of the \
-                PushChatMessage("This guy hitting the "+ textInput.Substring(1, textInput.Length-1) +"!!!!!!");
-                GameManager.GM._emoteScript.Emote("Emote"+emoteNum);
-                
-                //play emote from player's animator which doesnt exist yet
-            }
-            //if not inform the player
-            else
-            {
-                PushChatMessage("Invalid Emote : (");
-            }
+                    //play emote from player's animator which doesnt exist yet
+                }
+                //if not inform the player
+                else
+                {
+                    PushChatMessage("Invalid Emote : (");
+                }
             
             
+            }
         }
+        else
+        {
+            GameManager.GM.SetCanMove(true);
+        }
+        
+     
         
     }
 
