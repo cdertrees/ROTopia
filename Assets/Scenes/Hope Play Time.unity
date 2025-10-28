@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 318739987}
   - component: {fileID: 318739986}
   - component: {fileID: 318739985}
+  - component: {fileID: 318739988}
   - component: {fileID: 318739984}
   m_Layer: 0
   m_Name: Movement Test Dummy
@@ -177,7 +178,7 @@ MonoBehaviour:
   m_ActionEvents: []
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: 30c62512-0a01-4ac7-9cb1-18ade69274b7
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!212 &318739986
@@ -253,6 +254,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &318739988
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318739983}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &930838767
 GameObject:
   m_ObjectHideFlags: 0

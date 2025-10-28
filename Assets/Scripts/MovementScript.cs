@@ -1,103 +1,51 @@
 using System;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class MovementScript : MonoBehaviour
 {
-   //Booleans to determine if the player is holding a direction to move
-   private bool _controlLeft;
-   private bool _controlRight;
-   private bool _controlUp;
-   private bool _controlDown;
-   private int _frameCount = 0;
+   private Vector2 _movementInput;
+   private Rigidbody2D _playerRigidbody;
+   private float _speed;
+   private Vector2 _smoothMovement;
+   private Vector2 _smoothMovementVelocity;
+
+   private void Awake()
+   {
+      //This is to keep it all private lol lmao even
+      _playerRigidbody = GetComponent<Rigidbody2D>();
+
+      //This can be changed to whatever value to make the character faster
+      _speed = 3;
+   }
+
    private void FixedUpdate()
    {
-      //To count how many frames have gone since the game has started
-      _frameCount++;
-      
-      //The original 
-      //Used to slow down movement by making it check every few frames instead of every frame
-      if (_frameCount % 3 == 0 && GameManager.GM.canMove)
+      //This only happens if you're allowed to move
+      if (GameManager.GM.canMove)
       {
-         //If the player is holding down a direction, move the character in that direction
-         
-         //This is a direct tile movement where it places the player on the next tile
-         //This is the base movement, and will be updated with better stuff over time
-         //This may end up just getting commented out instead of deleted in case it's needed
-         if (_controlLeft)
-         {
-            transform.position += new Vector3(-.5f,.25f,0f);
-         }
-         if (_controlRight)
-         {
-            transform.position += new Vector3(.5f,-.25f,0f);
-         }
-         if (_controlUp)
-         {
-            transform.position += new Vector3(.5f,.25f,0f);
-         }
-         if (_controlDown)
-         {
-            transform.position += new Vector3(-.5f,-.25f,0f);
-         }
+         //The smooth movement stuff
+         //SmoothDamp used over Lerp because Lerp looks like ice physics
+         //The smooth time determines how much the player slides
+         _smoothMovement = Vector2.SmoothDamp
+            (_smoothMovement, _movementInput, ref _smoothMovementVelocity, 0.05f);
+      
+         //Where the movement is actually set
+         //This is also why the speed is a variable...to be able to change the speed
+         _playerRigidbody.linearVelocity = _smoothMovement * _speed;
       }
-   }
-   //The functions that say when the player is holding a direction to move
-   //These 4 are copy and paste of each other, so descriptions on this one only
-   void OnMoveLeft(InputValue value)
-   {
-      //The Input Value says 1 when the button is held down and 0 when released
-      //This checks if the value is greater than 0 (aka it's 1)
-      //Then it sets the boolean to true or false depending on that
-      
-      //To check if I fucked up
-      
-      //sorry hope i commented out your debug logs it was driving me cray
-      // Debug.Log(value.Get<float>());
-      
-      if (value.Get<float>() > 0)
-      {
-         _controlLeft = true;
-      }
+      //This is here to stop a bug
+      //Player would keep moving if button was held when clicking on chat box
       else
       {
-         _controlLeft = false;
+         _playerRigidbody.linearVelocity = Vector2.zero;
       }
    }
-   void OnMoveRight(InputValue value)
+   
+   void OnMovement(InputValue inputValue)
    {
-      // Debug.Log(value.Get<float>());
-      if (value.Get<float>() > 0)
-      {
-         _controlRight = true;
-      }
-      else
-      {
-         _controlRight = false;
-      }
-   }
-   void OnMoveUp(InputValue value)
-   {
-      // Debug.Log(value.Get<float>());
-      if (value.Get<float>() > 0)
-      {
-         _controlUp = true;
-      }
-      else
-      {
-         _controlUp = false;
-      }
-   }
-   void OnMoveDown(InputValue value)
-   {
-      // Debug.Log(value.Get<float>());
-      if (value.Get<float>() > 0)
-      {
-         _controlDown = true;
-      }
-      else
-      {
-         _controlDown = false;
-      }
+      //now the input system is all together in 2D movement
+      _movementInput = inputValue.Get<Vector2>();
    }
 }
