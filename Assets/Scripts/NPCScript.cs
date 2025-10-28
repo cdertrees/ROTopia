@@ -16,17 +16,17 @@ public class NPCScript : MonoBehaviour
             case "Emote0":
                 //dialogue display for this emote
                 
-                // Debug.Log("Dude wow");
+                Debug.Log("Dude wow");
                 break;
             case "Emote1":
                 //dialogue display for this emote
                 
-                // Debug.Log("wtf!!!!");
+                Debug.Log("wtf!!!!");
                 break;
             case "Emote2":
                 //dialogue display for this emote
                 
-                // Debug.Log("What are you doing on valentines day?");
+                Debug.Log("What are you doing on valentines day?");
                 break;
         }
     }
