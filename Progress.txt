@@ -1,12 +1,11 @@
 NEVER HAPPENING GOALS:
- -
- -
+ - make the game have a mobile port
+ - make the game in esoteric tools
+ - make tje game have vr mode and maybe integrate wii fit board compatibility
+
 LONG TERM GOALS:
  - Narrative
- - Areas 2 and 3
  - Animate Dances
- - Create Clay UI
- - Figure out Sprite layer sorting
  
 
 SHORT TERM GOALS:
@@ -22,19 +21,26 @@ THIS WEEK'S GOALS:
   	- Clay examples
   	- In-Engine screenshots
  HOPE:
- - Movement (WITH LERPING LAG, to accommodate walking anim)
-	
-		
- ZACH:
- 
+ - Sprite Layering
+ - Collision
+
 
  CAITLIN:
- - Bring Wire (WED.)
-
+ - Area 2 assets implemented
+ - NPC Dialogue Box, text scrolling, voice modulation
 
 	
 		
- CONNOR:
+ CONNOR & ZACH:
+ - Area 2 Assets
+ - Clay UI (Dialogue Box), Chat Box, Hotbar
+ - Player character created
+ - Start on Area 3 Assets
+ ZACH photograph, CONNOR edit
+
+EVERYONE:
+ - Dance Concepts
+
 
 
 DONE 8-): 
@@ -45,3 +51,5 @@ DONE 8-):
 - Edit Zach's Photos
  - Player Play Emotes, NPC Read Emotes (don't actually need animations rn, just placeholders)
  - Make it so players can't move when in the chat box (TALK TO HOPE BEFORE TOUCHING THEIR SHIT) 
+- Movement (WITH LERPING LAG, to accommodate walking anim)
+- Bring Wire (WED.)

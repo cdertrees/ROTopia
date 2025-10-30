@@ -10,6 +10,9 @@ public class GameManager : MonoBehaviour
     //decides player is actively exploring the map
     public bool canMove = true;
     
+    //STORE PLAYER POS IN HERE WHEN WE GO TO THE MEDIA PORTAL!
+    public Vector2 playerPos;
+    
     //Scripts
     public MovementScript movementScript;
     public EmoteScript emoteScript;
@@ -24,8 +27,11 @@ public class GameManager : MonoBehaviour
         }
         else
         {
+            //i am the gamemanager this is me i am now a singleton waow
             GM = this;
         }
+        
+        ShowDialogueBox(false);
 
     }
 
@@ -34,6 +40,10 @@ public class GameManager : MonoBehaviour
     {
         canMove = val;
     }
-    
+
+    public void ShowDialogueBox(bool setActive)
+    {
+        dialogueScript.gameObject.SetActive(setActive);
+    }
     
 }
