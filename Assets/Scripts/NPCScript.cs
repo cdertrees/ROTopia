@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPCScript : MonoBehaviour
 {
     public Sprite portrait;
+    public float typingWaitTime;
     //Responses to each emote, same order the emote names as assigned in the inspector 
     public List<String> responses;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -20,15 +21,15 @@ public class NPCScript : MonoBehaviour
         {
             case "Emote0":
                 //dialogue display for this emote
-                GameManager.GM.dialogueScript.DisplayDialogue(responses[0]);
+                GameManager.GM.dialogueScript.DisplayDialogue(responses[0], portrait, typingWaitTime);
                 break;
             case "Emote1":
                 //dialogue display for this emote
-                GameManager.GM.dialogueScript.DisplayDialogue(responses[1]);
+                GameManager.GM.dialogueScript.DisplayDialogue(responses[1], portrait, typingWaitTime);
                 break;
             case "Emote2":
                 //dialogue display for this emote
-                GameManager.GM.dialogueScript.DisplayDialogue(responses[2]);
+                GameManager.GM.dialogueScript.DisplayDialogue(responses[2], portrait, typingWaitTime);
                 break;
         }
     }

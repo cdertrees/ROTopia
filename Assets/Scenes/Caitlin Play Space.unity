@@ -2506,6 +2506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   portrait: {fileID: 6663752483712481128, guid: 7ecb2fd0480763149b175d4e1ef91487, type: 3}
+  typingWaitTime: 0.03
   responses:
   - why you schlibbin?
   - can you please touoch my poobis its been a long time
@@ -5475,6 +5476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueBox
   dialogueText: {fileID: 236339734}
+  _characterPortrait: {fileID: 1492579598}
 --- !u!114 &1753758460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5492,10 +5494,10 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 1753758455}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+        - m_Target: {fileID: 1753758459}
+          m_TargetAssemblyTypeName: DialogueBox, Assembly-CSharp
+          m_MethodName: Clicked
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
