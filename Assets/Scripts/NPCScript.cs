@@ -9,6 +9,9 @@ public class NPCScript : MonoBehaviour
     //Responses to each emote, same order the emote names as assigned in the inspector 
     public List<String> responses;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [SerializeField] private AudioClip npcVoice;
+    [SerializeField] [Range(-2, 2)] private float pitchMin, pitchMax;
+    
     void Start()
     {
         
@@ -16,21 +19,25 @@ public class NPCScript : MonoBehaviour
 
     public void Respond(String emote)
     {
+        int tempIndex = 0;
+        
         GameManager.GM.ShowDialogueBox(true);
         switch (emote)
         {
             case "Emote0":
-                //dialogue display for this emote
-                GameManager.GM.dialogueScript.DisplayDialogue(responses[0], portrait, typingWaitTime);
+                tempIndex = 0;
                 break;
             case "Emote1":
                 //dialogue display for this emote
-                GameManager.GM.dialogueScript.DisplayDialogue(responses[1], portrait, typingWaitTime);
+                tempIndex = 1;
                 break;
             case "Emote2":
                 //dialogue display for this emote
-                GameManager.GM.dialogueScript.DisplayDialogue(responses[2], portrait, typingWaitTime);
+                tempIndex = 2;
                 break;
         }
+        
+        GameManager.GM.dialogueScript.DisplayDialogue(responses[tempIndex], portrait, typingWaitTime, npcVoice, pitchMin, pitchMax);
+        
     }
 }

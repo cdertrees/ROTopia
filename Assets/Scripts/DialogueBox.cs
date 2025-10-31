@@ -4,25 +4,27 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class DialogueBox : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     public Image _characterPortrait;
-    
 
+    public AudioSource AS;
+    
     private bool doneTyping = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+        
     }
 
-    public void DisplayDialogue( String dialogue, Sprite characterPortrait, float typingWaitTime)
+    public void DisplayDialogue( String dialogue, Sprite characterPortrait, float typingWaitTime, AudioClip npcVoice, float pitchMin, float pitchMax)
     {
         doneTyping = false;
         //animate me 
-        StartCoroutine(TypeCoolAndGood(dialogue, typingWaitTime));
+        StartCoroutine(TypeCoolAndGood(dialogue, typingWaitTime, npcVoice, pitchMin, pitchMax));
         //show me the guy
         _characterPortrait.sprite = characterPortrait;
         
@@ -44,7 +46,7 @@ public class DialogueBox : MonoBehaviour
     }
     
     //animate typin one letter at a time
-    IEnumerator TypeCoolAndGood(string fullLine, float waitTime)
+    IEnumerator TypeCoolAndGood(string fullLine, float waitTime, AudioClip npcVoice, float pitchMin, float pitchMax)
     {
         //what is actually displayed on screen
         string currentLine = "";
@@ -62,6 +64,13 @@ public class DialogueBox : MonoBehaviour
            
             //increase text that is being shown by one more letter
             currentLine = fullLine.Substring(0, i);
+            
+            //stop previous voice clip so they dont overlap
+            AS.Stop();
+            //play the npc voice clip at a random pitch in the npcs voice range
+            AS.pitch = Random.Range(pitchMin, pitchMax);
+            AS.PlayOneShot(npcVoice);
+            
             //show on screen
             dialogueText.text = currentLine;
             

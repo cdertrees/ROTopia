@@ -2,11 +2,10 @@ NEVER HAPPENING GOALS:
  - make the game have a mobile port
  - make the game in esoteric tools
  - make tje game have vr mode and maybe integrate wii fit board compatibility
-
+ - schlibby on my poobis 
 LONG TERM GOALS:
  - Narrative
  - Animate Dances
- 
 
 SHORT TERM GOALS:
  - Get Clay implemented in-engine
@@ -14,6 +13,7 @@ SHORT TERM GOALS:
  - Player Character
  - Area 1
 	- Ground
+
 THIS WEEK'S GOALS:
 - Pitch Presentation
   	- Map
@@ -27,13 +27,13 @@ THIS WEEK'S GOALS:
 
  CAITLIN:
  - Area 2 assets implemented
- - NPC Dialogue Box, text scrolling, voice modulation
+
 
 	
 		
  CONNOR & ZACH:
  - Area 2 Assets
- - Clay UI (Dialogue Box), Chat Box, Hotbar
+ - Clay UI (Dialogue Box), Chat Box, Hot bar
  - Player character created
  - Start on Area 3 Assets
  ZACH photograph, CONNOR edit
@@ -53,3 +53,4 @@ DONE 8-):
  - Make it so players can't move when in the chat box (TALK TO HOPE BEFORE TOUCHING THEIR SHIT) 
 - Movement (WITH LERPING LAG, to accommodate walking anim)
 - Bring Wire (WED.)
+ - NPC Dialogue Box, text scrolling, voice modulation

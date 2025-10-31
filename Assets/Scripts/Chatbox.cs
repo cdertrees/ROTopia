@@ -37,6 +37,21 @@ public class Chatbox : MonoBehaviour
 
     public void Update()
     {
+     
+        //open chat with / shortcut
+        //CHANGE THIS SO IT USES NEW INPUT SYS
+        if (Input.GetKeyDown(KeyCode.Slash))
+        {
+            //"click into" the chatbox (this makes player unable to move)
+            EventSystem.current.SetSelectedGameObject(_chatInput.gameObject);
+            
+            _chatInput.text = "";
+            
+            //this isnt working how I need it to rn. the cursor starts before the /, so i just need to find out how to put it after
+            // _chatInput.text = "/";
+            
+        }
+        
         
         if ( EventSystem.current.currentSelectedGameObject != null)
         {
@@ -80,7 +95,9 @@ public class Chatbox : MonoBehaviour
                     PushChatMessage("Invalid Emote : (");
                 }
             
-            
+                //"refocus" the game out of the UI. without this you would have to click off of the UI to be able to walk again
+                EventSystem.current.SetSelectedGameObject(null);
+                
             }
         }
         else
