@@ -29,7 +29,6 @@ THIS WEEK'S GOALS:
 	
 		
  CONNOR & ZACH:
- - Area 1 Ground
  - Area 2 Assets
  - Player character created
  - Start on Area 3 Assets
