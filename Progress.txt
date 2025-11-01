@@ -3,6 +3,7 @@ NEVER HAPPENING GOALS:
  - make the game in esoteric tools
  - make tje game have vr mode and maybe integrate wii fit board compatibility
  - schlibby on my poobis til I marmadizzle
+
 LONG TERM GOALS:
  - Narrative
  - Animate Dances
@@ -10,6 +11,9 @@ LONG TERM GOALS:
 SHORT TERM GOALS:
  - Decide Dances
  - Player Character
+
+POLISH:
+- Make the MUSHROOM collision look cleaner or something
 
 THIS WEEK'S GOALS:
 - Pitch Presentation
