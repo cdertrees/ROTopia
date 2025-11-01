@@ -20,8 +20,11 @@ public class EmoteScript : MonoBehaviour
     {
         _emoteAnim.Play(animName);
         // last npc added to radius (hopefully the closest one) will be called to respond to the player. 
-        NPCS[^1].Respond(animName);
-        
+        if (NPCS.Count>0)
+        {
+            NPCS[^1].Respond(animName);
+        }
+       
        
     }
 
