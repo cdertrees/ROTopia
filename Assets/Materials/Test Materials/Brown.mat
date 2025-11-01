@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GradientMap:
-        m_Texture: {fileID: 2800000, guid: 5a807da27a84e884191612689caa836f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 1afbe6f29881bf042be5ae3c27027d06, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
