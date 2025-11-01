@@ -59,10 +59,15 @@ public class Chatbox : MonoBehaviour
 
     void OnOpenChat()
     {
-       //"click into" the chatbox (this makes player unable to move)
-        EventSystem.current.SetSelectedGameObject(_chatInput.gameObject);
-        _chatInput.text = "/";
-        _chatInput.MoveToEndOfLine(false, false);
+
+        if (EventSystem.current.currentSelectedGameObject != _chatInput.gameObject)
+        {
+            //"click into" the chatbox (this makes player unable to move)
+            EventSystem.current.SetSelectedGameObject(_chatInput.gameObject);
+            _chatInput.text = "/";
+            _chatInput.MoveToEndOfLine(false, false);
+        }
+      
     }
 
     void OnSubmitChatMsg()
