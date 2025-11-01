@@ -3,7 +3,6 @@ NEVER HAPPENING GOALS:
  - make the game in esoteric tools
  - make tje game have vr mode and maybe integrate wii fit board compatibility
  - schlibby on my poobis til I marmadizzle
-
 LONG TERM GOALS:
  - Narrative
  - Animate Dances
@@ -12,15 +11,8 @@ SHORT TERM GOALS:
  - Decide Dances
  - Player Character
 
-POLISH:
-- Make the MUSHROOM collision look cleaner or something
-
 THIS WEEK'S GOALS:
-- Pitch Presentation
-  	- Map
-  	- # of Scenes (Area 1 + 3 Subscenes (Houses), Area 2 + 1 Subscene, Area 3 + 2 Subscenes (Partner Plunge and Ticket Booth))
-  	- Clay examples
-  	- In-Engine screenshots
+
  HOPE:
  - Sprite Layering
  - Collision
@@ -28,12 +20,9 @@ THIS WEEK'S GOALS:
 
  CAITLIN:
  - Area 2 assets implemented
-
-
 	
 		
  CONNOR & ZACH:
- - Area 2 Assets
  - Player character created
  - Start on Area 3 Assets
  ZACH photograph, CONNOR edit
