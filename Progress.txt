@@ -2,17 +2,14 @@ NEVER HAPPENING GOALS:
  - make the game have a mobile port
  - make the game in esoteric tools
  - make tje game have vr mode and maybe integrate wii fit board compatibility
- - schlibby on my poobis 
+ - schlibby on my poobis til I marmadizzle
 LONG TERM GOALS:
  - Narrative
  - Animate Dances
 
 SHORT TERM GOALS:
- - Get Clay implemented in-engine
  - Decide Dances
  - Player Character
- - Area 1
-	- Ground
 
 THIS WEEK'S GOALS:
 - Pitch Presentation
@@ -32,15 +29,17 @@ THIS WEEK'S GOALS:
 	
 		
  CONNOR & ZACH:
+ - Area 1 Ground
  - Area 2 Assets
- - Clay UI (Dialogue Box), Chat Box, Hot bar
  - Player character created
  - Start on Area 3 Assets
  ZACH photograph, CONNOR edit
 
 EVERYONE:
  - Dance Concepts
-
+	- Schlibby
+	- Poobis
+	- Maramadizzle
 
 
 DONE 8-): 
