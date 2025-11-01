@@ -37,27 +37,38 @@ public class Chatbox : MonoBehaviour
 
     public void Update()
     {
-     
-        //open chat with / shortcut
-        //CHANGE THIS SO IT USES NEW INPUT SYS
-        if (Input.GetKeyDown(KeyCode.Slash))
+        GameManager.GM.SetCanMove(EventSystem.current.currentSelectedGameObject == null);
+    }
+
+    public void ResetScrollBar()
+    {
+        //reset scroll bar to bottom
+        _scroll.value = 0;
+    }
+    
+    public void PushChatMessage(String messageContent)
+    {
+        _chatInput.text = "";
+        //adds a new line and the desired message in the chat content text box
+        //sizing is handled by the content size fitter component in inspector
+        _chatContent.text += messageContent + "\n";
+        //sound effect here probably eventually
+        //then scrollbar resets so you can see the bottom msg :)
+        ResetScrollBar();
+    }
+
+    void OnOpenChat()
+    {
+       //"click into" the chatbox (this makes player unable to move)
+        EventSystem.current.SetSelectedGameObject(_chatInput.gameObject);
+        _chatInput.text = "/";
+        _chatInput.MoveToEndOfLine(false, false);
+    }
+
+    void OnSubmitChatMsg()
+    {
+        if (EventSystem.current.currentSelectedGameObject != null)
         {
-            //"click into" the chatbox (this makes player unable to move)
-            EventSystem.current.SetSelectedGameObject(_chatInput.gameObject);
-            
-            _chatInput.text = "";
-            
-            //this isnt working how I need it to rn. the cursor starts before the /, so i just need to find out how to put it after
-            // _chatInput.text = "/";
-            
-        }
-        
-        
-        if ( EventSystem.current.currentSelectedGameObject != null)
-        {
-            GameManager.GM.SetCanMove(false);
-            //will replace w unity input system. unsure if i need to wait for hope's stuff to come in first
-            //if i press enter, have the text field selected, and it is not empty
             if (Input.GetKeyDown(KeyCode.Return) &&
                 EventSystem.current.currentSelectedGameObject.name==_chatInput.gameObject.name &&
                 _chatInput.text != "")
@@ -100,30 +111,6 @@ public class Chatbox : MonoBehaviour
                 
             }
         }
-        else
-        {
-            GameManager.GM.SetCanMove(true);
-        }
-        
-     
-        
-    }
-
-    public void ResetScrollBar()
-    {
-        //reset scroll bar to bottom
-        _scroll.value = 0;
-    }
-    
-    public void PushChatMessage(String messageContent)
-    {
-        _chatInput.text = "";
-        //adds a new line and the desired message in the chat content text box
-        //sizing is handled by the content size fitter component in inspector
-        _chatContent.text += messageContent + "\n";
-        //sound effect here probably eventually
-        //then scrollbar resets so you can see the bottom msg :)
-        ResetScrollBar();
     }
     
 }
