@@ -14,12 +14,12 @@ SHORT TERM GOALS:
 THIS WEEK'S GOALS:
 
  HOPE:
- - Sprite Layering
- - Collision
+ - finish movement
 
 
  CAITLIN:
- - Area 2 assets implemented
+ - add stage
+ - add floor area 2 
 	
 		
  CONNOR & ZACH:
@@ -35,6 +35,8 @@ EVERYONE:
 
 
 DONE 8-): 
+- Sprite Layering
+ - Collision
 - Figure Out Isometric Camera in Unity
 - Implement Gradient Map Shaders and Pickers
 - Chat Function (Read Emotes)
