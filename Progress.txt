@@ -6,7 +6,7 @@ NEVER HAPPENING GOALS:
 LONG TERM GOALS:
  - Narrative
  - Animate Dances
-
+ - Ambient Background Shapes
 SHORT TERM GOALS:
  - Decide Dances
  - Player Character
