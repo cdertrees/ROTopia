@@ -3,13 +3,14 @@ NEVER HAPPENING GOALS:
  - make the game in esoteric tools
  - make tje game have vr mode and maybe integrate wii fit board compatibility
  - schlibby on my poobis til I marmadizzle
+
 LONG TERM GOALS:
  - Narrative
  - Animate Dances
  - Ambient Background Shapes
+
 SHORT TERM GOALS:
- - Decide Dances
- - Player Character
+(*￣3￣)╭
 
 THIS WEEK'S GOALS:
 
@@ -18,23 +19,29 @@ THIS WEEK'S GOALS:
 
 
  CAITLIN:
- - add stage
- - add floor area 2 
+ - add floor area 2 (waitin on connor)
+ - add valentine sprites (waitin on connor)
+ - animate cloud? 
 	
 		
  CONNOR & ZACH:
- - Player character created
+
  - Start on Area 3 Assets
  ZACH photograph, CONNOR edit
 
 EVERYONE:
+
+
+DONE 8-): 
+ - Decide Dances
+ - Player Character
+ - Player character created
  - Dance Concepts
 	- Schlibby
 	- Poobis
 	- Maramadizzle
-
-
-DONE 8-): 
+ - fix materials
+- add stage
 - Sprite Layering
  - Collision
 - Figure Out Isometric Camera in Unity
