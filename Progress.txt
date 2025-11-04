@@ -19,9 +19,8 @@ THIS WEEK'S GOALS:
 
 
  CAITLIN:
- - add floor area 2 (waitin on connor)
- - add valentine sprites (waitin on connor)
-	
+
+ - add valentine schlibby (i cannot decipher these)
 		
  CONNOR & ZACH:
 
@@ -32,6 +31,7 @@ EVERYONE:
 
 
 DONE 8-): 
+ - add floor area 2 (waitin on connor)
  - animate cloud
  - Decide Dances
  - Player Character

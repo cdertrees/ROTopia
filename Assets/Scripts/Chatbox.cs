@@ -35,9 +35,9 @@ public class Chatbox : MonoBehaviour
         ResetScrollBar();
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
-        //GameManager.GM.SetCanMove(EventSystem.current.currentSelectedGameObject == null);
+        GameManager.GM.SetCanMove(EventSystem.current.currentSelectedGameObject == null);
     }
 
     public void ResetScrollBar()
