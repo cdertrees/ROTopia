@@ -6684,6 +6684,18 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+      propertyPath: 'responses.Array.data[0]'
+      value: can you please touoch my poobis its been a long time
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+      propertyPath: 'responses.Array.data[1]'
+      value: marmadizzle party @ drippy tower!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+      propertyPath: 'responses.Array.data[2]'
+      value: why you schlibbin?
+      objectReference: {fileID: 0}
     - target: {fileID: 7986717273958060176, guid: 95816725f4d017c41897d65a146769a4, type: 3}
       propertyPath: m_TagString
       value: NPC
@@ -6728,8 +6740,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
