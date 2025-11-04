@@ -16,7 +16,9 @@ public class MovementScript : MonoBehaviour
    private Vector2 _startMove;
    private Vector2 _endMove;
    private int _frameCount;
-   private bool _gridMoveStart;
+   private bool _gridMoveStart, _gridMoveCollide;
+   private float _moveTimer, _collideTimer;
+   public Collider2D moveCollider;
 
    private void Awake()
    {
@@ -35,15 +37,58 @@ public class MovementScript : MonoBehaviour
          
          if (GameManager.GM.canMove)
          {
+            //The smooth movement code now
+            if (_gridMoveStart && !_gridMoveCollide)
+            {
+               //The thing that makes it nice and smooth
+               _smoothMovement = Vector2.SmoothDamp
+                  (_smoothMovement, _endMove, ref _smoothMovementVelocity, .125f);
+               transform.position = new Vector3(_smoothMovement.x, _smoothMovement.y, _smoothMovement.y);
+               _moveTimer += Time.deltaTime;
+               
+               //The extra time allows it to get closer to the desired end point
+               if (_moveTimer >= .19f)
+               {
+                  _gridMoveStart = false;
+                  Debug.Log("end position = "+transform.position);
+                  //This snaps it directly to the grid
+                  transform.position = new Vector3(_endMove.x, _endMove.y, 0);
+               }
+            }
+            //This is the code that causes the player to bounce back
+            //It's basically the inverse of the grid movement code
+            else if (_gridMoveStart && _gridMoveCollide)
+            {
+               _smoothMovement = Vector2.SmoothDamp
+                  (_smoothMovement, _startMove, ref _smoothMovementVelocity, _collideTimer);
+               transform.position = new Vector3(_smoothMovement.x, _smoothMovement.y, _smoothMovement.y);
+               _moveTimer -= Time.deltaTime;
+
+               if (_moveTimer <= -.65f)
+               {
+                  _gridMoveStart = false;
+                  _gridMoveCollide = false;
+                  Debug.Log("end position = "+transform.position);
+                  transform.position = new Vector3(_startMove.x, _startMove.y, 0);
+               }
+            }
             if (_movementInput != Vector2.zero)
             {
                //if (_frameCount % 6 == 0)
                if (!_gridMoveStart)
                {
+                  //The start move is set before anything happens to get the beginning point
                   _startMove = transform.position;
+                  //The end move is calculated based on what movement input is given
                   _endMove = new Vector2(_startMove.x+_movementInput.x,_startMove.y+(_movementInput.y/2));
-                  StartCoroutine(SmoothGridMove());
-                  //transform.position = _endMove;
+                  //This is to reset all the smooth movement stuff
+                  _smoothMovement = _startMove;
+                  _moveTimer = 0;
+                  _collideTimer = 0;
+                  //disable this for player to do some weird drift/jump thing :)
+                  _smoothMovementVelocity = Vector2.zero;
+                  _gridMoveStart = true;
+                  Debug.Log("end move = "+_endMove);
                }
             }
          }
@@ -78,21 +123,15 @@ public class MovementScript : MonoBehaviour
       _movementInput = inputValue.Get<Vector2>();
    }
 
-   IEnumerator SmoothGridMove()
+   public void OnTriggerEnter2D(Collider2D other)
    {
-      _gridMoveStart = true;
-      float moveTimer = 0;
-
-      while (moveTimer < .25f)
+      //The funny bounce back only happens if the collision happened to the box collider at the bottom of the player
+      if (other.IsTouching(moveCollider))
       {
+         Debug.Log(other.gameObject);
          Debug.Log("hi");
-         _smoothMovement = Vector2.SmoothDamp
-            (_smoothMovement, _endMove, ref _smoothMovementVelocity, 0.25f);
-         transform.position = new Vector3(_smoothMovement.x, _smoothMovement.y, _smoothMovement.y);
-         moveTimer += Time.deltaTime;
+         _gridMoveCollide = true;
+         _collideTimer = _moveTimer;
       }
-
-      _gridMoveStart = false;
-      yield return new WaitForSeconds(.01f);
    }
 }
