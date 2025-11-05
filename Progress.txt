@@ -6,12 +6,12 @@ NEVER HAPPENING GOALS:
 
 LONG TERM GOALS:
  - Narrative
- - Animate Dances
  - Ambient Background Shapes
-
+ - Make NPCs and headshots of NPCs
+ - "Story of ROTopia" NPC Narrative
 SHORT TERM GOALS:
-(*￣3￣)╭
-
+- Make animation system accommodate 4 directions of dance
+- Media Portal Prep
 THIS WEEK'S GOALS:
 
  HOPE:
@@ -24,11 +24,13 @@ THIS WEEK'S GOALS:
 		
  CONNOR & ZACH:
 
- - Start on Area 3 Assets
+ - Finish Area 3 Assets
  ZACH photograph, CONNOR edit
 
-EVERYONE:
-
+ EVERYONE:
+ - Portal Narratives and "diagetic features"
+	- Short stories told through portals
+	- ideas about how they were used culturally in-game
 
 DONE 8-): 
  - add floor area 2 (waitin on connor)
