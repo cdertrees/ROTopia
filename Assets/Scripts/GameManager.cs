@@ -7,17 +7,21 @@ public class GameManager : MonoBehaviour
 
     //GM Variables - Sources of truth for the whole game.
     
+    
+    
     //decides player is actively exploring the map
     public bool canMove = true;
+    public char lastMovementDir;
     
     //STORE PLAYER POS IN HERE WHEN WE GO TO THE MEDIA PORTAL!
     public Vector2 playerPos;
+
     
     //Scripts
     public MovementScript movementScript;
     public EmoteScript emoteScript;
     public DialogueBox dialogueScript;
-
+    
     private void Awake()
     {
         //If you are not me kill yourself!!!!!
@@ -44,6 +48,24 @@ public class GameManager : MonoBehaviour
     public void ShowDialogueBox(bool setActive)
     {
         dialogueScript.gameObject.SetActive(setActive);
+    }
+
+
+    /// <summary>
+    /// A function that plays an animation on the player given a specified direction. Can be a dance or a walk animation.
+    /// </summary>
+    /// <param name="animationName">the EXACT NAME!!!! of the animation as a string minus it's direction. double check in editor.</param>
+    /// <param name="direction">a character representing the direction of the animation (ONLY U,D,R,L). added to the end of the anim's name to find the correct directional variant.</param>
+    public void PlayerAnimate(string animationName, char direction)
+    {
+        lastMovementDir = direction;
+        emoteScript.Emote(animationName, direction);
+    }
+    
+    //a secondary version only to be used by the chatbox, does not require directional input
+    public void PlayerAnimate(string animationName)
+    {
+        emoteScript.Emote(animationName, lastMovementDir);
     }
     
 }

@@ -13,7 +13,7 @@ public class DialogueBox : MonoBehaviour
 
     public AudioSource AS;
     
-    private bool doneTyping = true;
+    private bool _doneTyping = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,7 +22,7 @@ public class DialogueBox : MonoBehaviour
 
     public void DisplayDialogue( String dialogue, Sprite characterPortrait, float typingWaitTime, AudioClip npcVoice, float pitchMin, float pitchMax)
     {
-        doneTyping = false;
+        _doneTyping = false;
         //animate me 
         StartCoroutine(TypeCoolAndGood(dialogue, typingWaitTime, npcVoice, pitchMin, pitchMax));
         //show me the guy
@@ -33,7 +33,7 @@ public class DialogueBox : MonoBehaviour
     public void Clicked()
     {
         //if text is finished typing
-        if (doneTyping)
+        if (_doneTyping)
         {
             //hide me
             gameObject.SetActive(false);
@@ -41,7 +41,7 @@ public class DialogueBox : MonoBehaviour
         else
         {
             //show the whole line
-            doneTyping = true;
+            _doneTyping = true;
         }
     }
     
@@ -55,7 +55,7 @@ public class DialogueBox : MonoBehaviour
         for (int i = 0; i <= fullLine.Length; i++)
         {
             //if you skipped the text i.e. done typing is true & you're not actually done typing
-            if (doneTyping)
+            if (_doneTyping)
             {
                 //show text and break out
                 dialogueText.text = fullLine;
@@ -77,7 +77,7 @@ public class DialogueBox : MonoBehaviour
             //if line finished typing get out of the loop
             if (currentLine.Equals(fullLine))
             {
-                doneTyping = true;
+                _doneTyping = true;
                 yield break;
             }
             

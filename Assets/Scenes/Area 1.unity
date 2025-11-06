@@ -1713,7 +1713,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 34.1, y: 0.000017166138}
-  m_SizeDelta: {x: 0, y: 46.76}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!222 &579749495
 CanvasRenderer:
@@ -2658,7 +2658,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7986717273958060176, guid: 95816725f4d017c41897d65a146769a4, type: 3}
   m_PrefabInstance: {fileID: 6537638884212972904}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1045112594
+--- !u!114 &1045112597
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2673,9 +2673,9 @@ MonoBehaviour:
   portrait: {fileID: 6663752483712481128, guid: 7ecb2fd0480763149b175d4e1ef91487, type: 3}
   typingWaitTime: 0.1
   responses:
-  - why you schlibbin?
-  - can you please touoch my poobis its been a long time
-  - marmadizzle party @ drippy tower!!!
+  - EMOTE 0 (POOBIS)
+  - EMOTE 1 (MARMADIZZLE)
+  - EMOTE 2 (SCHLIBBY)
   npcVoice: {fileID: 8300000, guid: 5543dc1f70b679e428289c39f67f3746, type: 3}
   pitchMin: 1.19
   pitchMax: 0.69
@@ -3317,7 +3317,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9091354590696803375, guid: 04008b614d916d348a77b089f8718305, type: 3}
+  m_Sprite: {fileID: 9058205644046063298, guid: 05c97daf8a1df2c4cbfe152631a1a494, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5039,6 +5039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   canMove: 1
+  lastMovementDir: 68
   playerPos: {x: 0, y: 0}
   movementScript: {fileID: 445653205}
   emoteScript: {fileID: 1333172434}
@@ -5974,7 +5975,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1801821974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6252,7 +6253,7 @@ RectTransform:
   m_Father: {fileID: 43566438}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -6777,16 +6778,36 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+      propertyPath: responses.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
       propertyPath: 'responses.Array.data[0]'
-      value: can you please touoch my poobis its been a long time
+      value: EMOTE 0 (POOBIS)
       objectReference: {fileID: 0}
     - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
       propertyPath: 'responses.Array.data[1]'
-      value: marmadizzle party @ drippy tower!!!
+      value: EMOTE 1 (MARMADIZZLE)
       objectReference: {fileID: 0}
     - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
       propertyPath: 'responses.Array.data[2]'
+      value: EMOTE 2 (SCHLIBBY)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+      propertyPath: 'responses.Array.data[3]'
       value: why you schlibbin?
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+      propertyPath: 'responses.Array.data[4]'
+      value: marmadizzle party @ drippy tower!!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+      propertyPath: 'responses.Array.data[5]'
+      value: can you please touoch my poobis its been a long time
+      objectReference: {fileID: 0}
+    - target: {fileID: 7986717273958060176, guid: 95816725f4d017c41897d65a146769a4, type: 3}
+      propertyPath: m_Name
+      value: SCRIPT AND COLLIDER (WRITE DIALOGUE)
       objectReference: {fileID: 0}
     - target: {fileID: 7986717273958060176, guid: 95816725f4d017c41897d65a146769a4, type: 3}
       propertyPath: m_TagString
@@ -6832,7 +6853,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3434608546333041360, guid: 95816725f4d017c41897d65a146769a4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -6841,7 +6863,7 @@ PrefabInstance:
       addedObject: {fileID: 1225297206}
     - targetCorrespondingSourceObject: {fileID: 7986717273958060176, guid: 95816725f4d017c41897d65a146769a4, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1045112594}
+      addedObject: {fileID: 1045112597}
   m_SourcePrefab: {fileID: 100100000, guid: 95816725f4d017c41897d65a146769a4, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

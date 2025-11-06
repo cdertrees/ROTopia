@@ -101,7 +101,9 @@ public class Chatbox : MonoBehaviour
                 {
                     //get rid of the \
                     PushChatMessage("This guy hitting the "+ textInput.Substring(1, textInput.Length-1) +"!!!!!!");
-                    GameManager.GM.emoteScript.Emote("Emote"+emoteNum);
+                    
+                    //THE 'D' WILL GET SWITCHED WHEN WE MAKE DIRECTIONAL ANIMATIONS
+                    GameManager.GM.PlayerAnimate("Emote"+emoteNum);
                 
                     //play emote from player's animator which doesnt exist yet
                 }
