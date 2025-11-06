@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 1340468708875269414}
   - component: {fileID: 7946432034847952254}
   m_Layer: 0
-  m_Name: Cloud
+  m_Name: FloatieBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
