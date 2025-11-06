@@ -7,27 +7,31 @@ NEVER HAPPENING GOALS:
 LONG TERM GOALS:
  - Narrative
  - Ambient Background Shapes
- - Make NPCs and headshots of NPCs
+- Make NPCs and headshots of NPCs
  - "Story of ROTopia" NPC Narrative
 SHORT TERM GOALS:
-- Make animation system accommodate 4 directions of dance
+(*￣3￣)╭
 - Media Portal Prep
+
 THIS WEEK'S GOALS:
 
- HOPE:
- - finish movement
+HOPE:
+ - make the real grid smaller? or at least just make it proportionate
+ - stop snappin'
+ - music?
 
+CAITLIN:
+ - add valentine schlibby 
+ - implementing area 3 assets
+ - Make animation system accommodate 4 directions of dance
 
- CAITLIN:
-
- - add valentine schlibby (i cannot decipher these)
-		
+	
  CONNOR & ZACH:
 
- - Finish Area 3 Assets
+ Finish Area 3 Assets
  ZACH photograph, CONNOR edit
 
- EVERYONE:
+EVERYONE:
  - Portal Narratives and "diagetic features"
 	- Short stories told through portals
 	- ideas about how they were used culturally in-game
