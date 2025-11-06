@@ -14,16 +14,19 @@ SHORT TERM GOALS:
 - Media Portal Prep
 
 THIS WEEK'S GOALS:
-
+<FRAME 3 BAD
+SHOULD LOOK LI
+like first
+but dif leg
+STERAGINT LEG
 HOPE:
  - make the real grid smaller? or at least just make it proportionate
  - stop snappin'
  - music?
 
 CAITLIN:
- - add valentine schlibby 
  - implementing area 3 assets
- - Make animation system accommodate 4 directions of dance
+
 
 	
  CONNOR & ZACH:
@@ -37,6 +40,8 @@ EVERYONE:
 	- ideas about how they were used culturally in-game
 
 DONE 8-): 
+ - Make animation system accommodate 4 directions of dance
+ - add valentine schlibby 
  - add floor area 2 (waitin on connor)
  - animate cloud
  - Decide Dances
