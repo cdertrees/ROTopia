@@ -8,7 +8,7 @@ public class MovementScript : MonoBehaviour
 {
    private Vector2 _movementInput;
    private Rigidbody2D _playerRigidbody;
-   private float _speed;
+   [SerializeField] private float _speed;
    private Vector2 _smoothMovement;
    private Vector2 _smoothMovementVelocity;
 
@@ -20,12 +20,14 @@ public class MovementScript : MonoBehaviour
    private float _moveTimer, _collideTimer;
    public Collider2D moveCollider;
 
+   //'U', 'D', 'L', 'R'
+   private char dir;
+   
    private void Awake()
    {
       //This is to keep it all private lol lmao even
       _playerRigidbody = GetComponent<Rigidbody2D>();
-
-      //This can be changed to whatever value to make the character faster
+      
       _speed = 3;
 
       transform.position = PlayerInfo.playerPos;
@@ -42,6 +44,8 @@ public class MovementScript : MonoBehaviour
             //The smooth movement code now
             if (_gridMoveStart && !_gridMoveCollide)
             {
+              
+               GameManager.GM.PlayerAnimate("Walk", dir);
                //The thing that makes it nice and smooth
                _smoothMovement = Vector2.SmoothDamp
                   (_smoothMovement, _endMove, ref _smoothMovementVelocity, .125f);
@@ -123,6 +127,25 @@ public class MovementScript : MonoBehaviour
    {
       //now the input system is all together in 2D movement
       _movementInput = inputValue.Get<Vector2>();
+      print(_movementInput);
+      
+      //ugly please fix iomg
+      if (_movementInput.y == 1)
+      {
+         dir = 'U';
+      }
+      else if (_movementInput.y == -1)
+      {
+         dir = 'D';
+      }
+      else if (_movementInput.x == 1)
+      {
+         dir = 'R';
+      }
+      else if (_movementInput.x == -1)
+      {
+         dir = 'L';
+      }
    }
 
    public void OnTriggerEnter2D(Collider2D other)

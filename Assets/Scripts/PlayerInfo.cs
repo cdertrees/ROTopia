@@ -16,12 +16,13 @@ public class PlayerInfo : MonoBehaviour
     public void SetPlayerPos(Vector2 pos)
     {
         playerPos = pos;
+        playerDirection = GameManager.GM.lastMovementDir;
     }
     
-    public Vector2 GetPlayerPos()
-    {
-        return playerPos;
-    }
+    // public Vector2 GetPlayerPos()
+    // {
+    //     return playerPos;
+    // }
 
     public void GoBack(string scene)
     {
