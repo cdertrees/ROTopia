@@ -18,11 +18,6 @@ public class PlayerInfo : MonoBehaviour
         playerPos = pos;
         playerDirection = GameManager.GM.lastMovementDir;
     }
-    
-    // public Vector2 GetPlayerPos()
-    // {
-    //     return playerPos;
-    // }
 
     public void GoBack(string scene)
     {

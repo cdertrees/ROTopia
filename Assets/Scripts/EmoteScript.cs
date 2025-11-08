@@ -9,7 +9,7 @@ public class EmoteScript : MonoBehaviour
     //NPCS in range of the player
     public List<NPCScript> NPCS;
     public List<MediaPortal> MediaPortals;
-
+    
     // private GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,14 +30,20 @@ public class EmoteScript : MonoBehaviour
         _emoteAnim.Play(fullname);
         
         // last npc added to radius (hopefully the closest one) will be called to respond to the player. 
-        if (MediaPortals.Count > 0)
+
+        if (animName != "Walk")
         {
-            MediaPortals[^1].Open();
+            if (MediaPortals.Count > 0 )
+            {
+                
+                MediaPortals[^1].Open();
+            }
+            else if (NPCS.Count > 0)
+            {
+                NPCS[^1].Respond(animName);
+            } 
         }
-        else if (NPCS.Count > 0)
-        {
-            NPCS[^1].Respond(animName);
-        }
+       
        
     }
     

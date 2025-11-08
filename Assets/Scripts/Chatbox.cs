@@ -31,7 +31,7 @@ public class Chatbox : MonoBehaviour
         _chatInput = GetComponentInChildren<TMP_InputField>();
         
         //reset everything
-        _chatContent.text = "<i>Welcome to Rotopia, Terrabite!\nRemember to type /schlibby to hit the Schlibby!</i>";
+        _chatContent.text = "<i>Welcome to Rotopia, Terrabite!\nRemember to type /schlibby to hit the Schlibby!</i>\n";
         ResetScrollBar();
     }
 

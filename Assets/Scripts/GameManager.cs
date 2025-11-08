@@ -4,10 +4,8 @@ using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager GM;
-
     //GM Variables - Sources of truth for the whole game.
-    
+    public static GameManager GM;
     
     //decides player is actively exploring the map
     public bool canMove = true;
@@ -15,7 +13,6 @@ public class GameManager : MonoBehaviour
     
     //STORE PLAYER POS IN HERE WHEN WE GO TO THE MEDIA PORTAL!
     // public static Vector2 playerPos;
-
     
     //Scripts
     public MovementScript movementScript;
