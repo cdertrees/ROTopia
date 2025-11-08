@@ -14,27 +14,22 @@ SHORT TERM GOALS:
 - Media Portal Prep
 
 THIS WEEK'S GOALS:
-<FRAME 3 BAD
-SHOULD LOOK LI
-like first
-but dif leg
-STERAGINT LEG
+
 HOPE:
- - make the real grid smaller? or at least just make it proportionate
- - stop snappin'
+
  - music?
 
 CAITLIN:
  - implementing area 3 assets
-
-	
+ - re-implement are 2 floor
+ - add animation triggers to movement script
+ - fix snapping
 CONNOR:
- - edit Area3 Billboard
- - edit Area3 Partner Plunge
- - edit Area 3 Market Stall One
+
  - edit Area 2 Floor (and cut out tiles)
 ZACH:
 - Make Area 3 Floor
+- ambient background shape for area 2 and 3
 
 EVERYONE:
  - Portal Narratives and "diagetic features"
