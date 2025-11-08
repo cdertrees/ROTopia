@@ -43,8 +43,7 @@ public class EmoteScript : MonoBehaviour
                 NPCS[^1].Respond(animName);
             } 
         }
-       
-       
+        
     }
     
     private void OnTriggerEnter2D(Collider2D other)
