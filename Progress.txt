@@ -25,9 +25,13 @@ CAITLIN:
  - add animation triggers to movement script
  - fix snapping
 CONNOR:
-
- - edit Area 2 Floor (and cut out tiles)
+ - edit area 3 floor
+ - edit big wheel
+ - edit prizeWheel
 ZACH:
+- take puctures of big wheel
+- take puctures of area 3 florr
+- Clay X
 - Make Area 3 Floor
 - ambient background shape for area 2 and 3
 
