@@ -27,8 +27,10 @@ public class MovementScript : MonoBehaviour
 
       //This can be changed to whatever value to make the character faster
       _speed = 3;
-   }
 
+      transform.position = PlayerInfo.playerPos;
+   }
+   
    private void FixedUpdate()
    {
       if (gridBased)
@@ -50,7 +52,7 @@ public class MovementScript : MonoBehaviour
                if (_moveTimer >= .19f)
                {
                   _gridMoveStart = false;
-                  Debug.Log("end position = "+transform.position);
+                  // Debug.Log("end position = "+transform.position);
                   //This snaps it directly to the grid
                   transform.position = new Vector3(_endMove.x, _endMove.y, 0);
                }
@@ -68,7 +70,7 @@ public class MovementScript : MonoBehaviour
                {
                   _gridMoveStart = false;
                   _gridMoveCollide = false;
-                  Debug.Log("end position = "+transform.position);
+                  // Debug.Log("end position = "+transform.position);
                   transform.position = new Vector3(_startMove.x, _startMove.y, 0);
                }
             }
@@ -88,7 +90,7 @@ public class MovementScript : MonoBehaviour
                   //disable this for player to do some weird drift/jump thing :)
                   _smoothMovementVelocity = Vector2.zero;
                   _gridMoveStart = true;
-                  Debug.Log("end move = "+_endMove);
+                  // Debug.Log("end move = "+_endMove);
                }
             }
          }

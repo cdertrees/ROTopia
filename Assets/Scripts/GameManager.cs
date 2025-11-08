@@ -1,26 +1,28 @@
+using System;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager GM { get; private set; }
+    public static GameManager GM;
 
     //GM Variables - Sources of truth for the whole game.
     
     
-    
     //decides player is actively exploring the map
     public bool canMove = true;
-    public char lastMovementDir;
+    public  char lastMovementDir;
     
     //STORE PLAYER POS IN HERE WHEN WE GO TO THE MEDIA PORTAL!
-    public Vector2 playerPos;
+    // public static Vector2 playerPos;
 
     
     //Scripts
     public MovementScript movementScript;
     public EmoteScript emoteScript;
     public DialogueBox dialogueScript;
+
+    public bool mediaPortalScene;
     
     private void Awake()
     {
@@ -35,8 +37,19 @@ public class GameManager : MonoBehaviour
             GM = this;
         }
         
-        ShowDialogueBox(false);
+        // DontDestroyOnLoad(this.gameObject);
+        
+    }
 
+    private void Start()
+    {
+        
+        // print("THIS AFTER I MOCE pos: "+playerPos);
+        if (mediaPortalScene)
+        {
+            ShowDialogueBox(false);
+        }
+        
     }
 
     //disable player movement. this will happen whenever the player is interacting with an npc or is typing in the chat box
@@ -49,8 +62,7 @@ public class GameManager : MonoBehaviour
     {
         dialogueScript.gameObject.SetActive(setActive);
     }
-
-
+    
     /// <summary>
     /// A function that plays an animation on the player given a specified direction. Can be a dance or a walk animation.
     /// </summary>

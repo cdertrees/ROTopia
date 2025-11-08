@@ -8,10 +8,13 @@ public class EmoteScript : MonoBehaviour
 
     //NPCS in range of the player
     public List<NPCScript> NPCS;
-    
+    public List<MediaPortal> MediaPortals;
+
+    // private GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // player = GetComponentInParent<MovementScript>().gameObject;
         _emoteAnim = GetComponent<Animator>();
     }
 
@@ -27,13 +30,17 @@ public class EmoteScript : MonoBehaviour
         _emoteAnim.Play(fullname);
         
         // last npc added to radius (hopefully the closest one) will be called to respond to the player. 
-        if (NPCS.Count>0)
+        if (MediaPortals.Count > 0)
+        {
+            MediaPortals[^1].Open();
+        }
+        else if (NPCS.Count > 0)
         {
             NPCS[^1].Respond(animName);
         }
        
     }
-
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         //If an npc enters the emote radius, add them to the npc list
@@ -41,7 +48,10 @@ public class EmoteScript : MonoBehaviour
         {
             NPCS.Add(other.GetComponent<NPCScript>());
         }
-        
+        else if (other.gameObject.CompareTag("MediaPortal"))
+        {
+            MediaPortals.Add(other.GetComponent<MediaPortal>());
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
@@ -50,6 +60,10 @@ public class EmoteScript : MonoBehaviour
         if (other.gameObject.CompareTag("NPC"))
         {
             NPCS.Remove(other.GetComponent<NPCScript>());
+        }
+        if (other.gameObject.CompareTag("MediaPortal"))
+        {
+            MediaPortals.Remove(other.GetComponent<MediaPortal>());
         }
     }
 }

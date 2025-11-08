@@ -318,6 +318,7 @@ GameObject:
   - component: {fileID: 4293820303164381458}
   - component: {fileID: 7519943156386205798}
   - component: {fileID: 6460849555154649054}
+  - component: {fileID: 8370300715911981116}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -429,6 +430,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpriteLayering
   doesMove: 1
   currentPosition: {x: 0, y: 0, z: 0}
+--- !u!114 &8370300715911981116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7152381366354470364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6581df800280f834b8c20fcb010d8bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInfo
 --- !u!1 &8344558162990496207
 GameObject:
   m_ObjectHideFlags: 0
@@ -571,6 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmoteScript
   NPCS: []
+  MediaPortals: []
 --- !u!95 &4162319116262934329
 Animator:
   serializedVersion: 7
