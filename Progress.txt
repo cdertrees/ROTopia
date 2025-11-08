@@ -7,8 +7,8 @@ NEVER HAPPENING GOALS:
 LONG TERM GOALS:
  - Narrative
  - Ambient Background Shapes
-- Make NPCs and headshots of NPCs
- - "Story of ROTopia" NPC Narrative
+ - Make NPCs and headshots of NPCs
+ - Adapt lore bible into NPC responses
 SHORT TERM GOALS:
 (*￣3￣)╭
 - Media Portal Prep
@@ -27,7 +27,6 @@ HOPE:
 CAITLIN:
  - implementing area 3 assets
 
-
 	
  CONNOR & ZACH:
 
@@ -37,11 +36,10 @@ CAITLIN:
 EVERYONE:
  - Portal Narratives and "diagetic features"
 	- Short stories told through portals
-	- ideas about how they were used culturally in-game
 
 DONE 8-): 
  - Make animation system accommodate 4 directions of dance
- - add valentine schlibby 
+ - add valentine schlibby
  - add floor area 2 (waitin on connor)
  - animate cloud
  - Decide Dances
