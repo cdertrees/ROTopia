@@ -25,12 +25,10 @@ CAITLIN:
  - add animation triggers to movement script
  - fix snapping
 CONNOR:
- - edit area 3 floor
- - edit big wheel
- - edit background shapes for areas 2 and 3
+- edit clay Picker for the Big Wheel
 ZACH:
 - Clay X
-- Make Prize Wheel Scene
+- make clay Picker for the Big Wheel
 EVERYONE:
  - Portal Narratives and "diagetic features"
 	- Short stories told through portals
