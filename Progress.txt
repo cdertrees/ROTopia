@@ -27,14 +27,11 @@ CAITLIN:
 CONNOR:
  - edit area 3 floor
  - edit big wheel
- - edit prizeWheel
+ - edit background shapes for areas 2 and 3
+ - Movement Code rework
 ZACH:
-- take puctures of big wheel
-- take puctures of area 3 florr
 - Clay X
-- Make Area 3 Floor
-- ambient background shape for area 2 and 3
-
+- Make Prize Wheel Scene
 EVERYONE:
  - Portal Narratives and "diagetic features"
 	- Short stories told through portals
