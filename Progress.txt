@@ -28,7 +28,6 @@ CONNOR:
  - edit area 3 floor
  - edit big wheel
  - edit background shapes for areas 2 and 3
- - Movement Code rework
 ZACH:
 - Clay X
 - Make Prize Wheel Scene

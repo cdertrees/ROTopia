@@ -4577,13 +4577,21 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 6650505447914274967, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768630116579732964, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7152381366354470364, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7519943156386205798, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
       propertyPath: _speed
-      value: 5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 9134911229436018615, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
       propertyPath: m_LocalPosition.x

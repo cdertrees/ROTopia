@@ -12,9 +12,10 @@ public class MovementScript : MonoBehaviour
    private Vector2 _smoothMovement;
    private Vector2 _smoothMovementVelocity;
 
-   public bool gridBased;
+   private bool moving;
    private Vector2 _startMove;
    private Vector2 _endMove;
+   private Vector2 _heldinput;
    private int _frameCount;
    private bool _gridMoveStart, _gridMoveCollide;
    private float _moveTimer, _collideTimer;
@@ -25,16 +26,69 @@ public class MovementScript : MonoBehaviour
    
    private void Awake()
    {
+      Application.targetFrameRate = 60;
       //This is to keep it all private lol lmao even
       _playerRigidbody = GetComponent<Rigidbody2D>();
-      
-      _speed = 3;
-
       transform.position = PlayerInfo.playerPos;
    }
-   
+
+   public float marginx;
+   public float marginy;
    private void FixedUpdate()
    {
+      _frameCount++;
+         
+      if (GameManager.GM.canMove)
+      {
+         //The smooth movement code now
+         if (_gridMoveStart && !_gridMoveCollide)
+         {
+            moving = true;
+            GameManager.GM.PlayerAnimate("Walk", dir);
+            //The thing that makes it nice and smooth
+            _smoothMovement = Vector2.SmoothDamp(transform.position, _endMove, ref _smoothMovementVelocity, _speed);
+            transform.position = new Vector3(_smoothMovement.x, _smoothMovement.y, _smoothMovement.y);
+               
+            //pulls margin from current pos and then target pos in both axis
+            marginx = Mathf.Abs(transform.position.x - _endMove.x);
+            marginy = Mathf.Abs(transform.position.y - _endMove.y);
+            //checks if margin is allowable for snap
+            if (marginx < 0.01f && marginy < 0.01f)
+            {
+               moving=false;
+               _gridMoveStart = false;
+               // Debug.Log("end position = "+transform.position);
+               //This snaps it directly to the grid
+               transform.position = new Vector3(_endMove.x, _endMove.y, 0);
+            }
+         }
+         if (_movementInput != Vector2.zero)
+         {
+            if (!_gridMoveStart)
+            {
+               RaycastHit hit;
+               Debug.DrawRay(new Vector2(transform.position.x,transform.position.y+1), transform.TransformDirection(_movementInput) * 1f, Color.yellow); 
+               if (!Physics2D.Raycast(new Vector2(transform.position.x,transform.position.y+1), transform.TransformDirection(_movementInput), 1f))
+               {
+                  //The start move is set before anything happens to get the beginning point
+                  _startMove = transform.position;
+                  //The end move is calculated based on what movement input is given
+                  _endMove = new Vector2(_startMove.x+_movementInput.x,_startMove.y+_movementInput.y);
+                  //This is to reset all the smooth movement stuff
+                  _smoothMovement = _startMove;
+                  //disable this for player to do some weird drift/jump thing :)
+                  _smoothMovementVelocity = Vector2.zero;
+                  _gridMoveStart = true;
+                  // Debug.Log("end move = "+_endMove);
+               }
+               
+            }
+         }
+      }
+         
+      #region oldmovecode
+      //yea so no
+      /*
       if (gridBased)
       {
          _frameCount++;
@@ -120,7 +174,8 @@ public class MovementScript : MonoBehaviour
          {
             _playerRigidbody.linearVelocity = Vector2.zero;
          }
-      }
+      }*/
+      #endregion
    }
    
    void OnMovement(InputValue inputValue)
@@ -143,9 +198,10 @@ public class MovementScript : MonoBehaviour
          dir = 'R';
       }
       else if (_movementInput.x == -1)
-      {
+      { 
          dir = 'L';
       }
+      
    }
 
    public void OnTriggerEnter2D(Collider2D other)
