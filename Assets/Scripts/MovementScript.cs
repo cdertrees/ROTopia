@@ -12,7 +12,7 @@ public class MovementScript : MonoBehaviour
    private Vector2 _smoothMovement;
    private Vector2 _smoothMovementVelocity;
 
-   private bool moving;
+   private bool _moving;
    private Vector2 _startMove;
    private Vector2 _endMove;
    private Vector2 _heldinput;
@@ -36,14 +36,20 @@ public class MovementScript : MonoBehaviour
    public float marginy;
    private void FixedUpdate()
    {
+      // Debug.Log("MOVING: " + _moving);
+      // Debug.Log("GRID MOVE START: " + _gridMoveStart);
+      // Debug.Log("GRID MOVE COLLIDE: " + _gridMoveCollide);
+     
       _frameCount++;
          
       if (GameManager.GM.canMove)
       {
+         // Debug.Log("AM NOT IN THE UI");
          //The smooth movement code now
          if (_gridMoveStart && !_gridMoveCollide)
          {
-            moving = true;
+            
+            _moving = true;
             
             //The thing that makes it nice and smooth
             _smoothMovement = Vector2.SmoothDamp(transform.position, _endMove, ref _smoothMovementVelocity, _speed);
@@ -55,20 +61,31 @@ public class MovementScript : MonoBehaviour
             //checks if margin is allowable for snap
             if (marginx < 0.01f && marginy < 0.01f)
             {
-               moving = false;
+               _moving = false;
                _gridMoveStart = false;
                // Debug.Log("end position = "+transform.position);
                //This snaps it directly to the grid
                transform.position = new Vector3(_endMove.x, _endMove.y, 0);
             }
          }
+         //If movement input not 0,0 (set in input function) (meaning I have released a key yass~)
          if (_movementInput != Vector2.zero)
          {
+            //If movement lerping has not started yet
             if (!_gridMoveStart)
             {
-               RaycastHit hit;
-               Debug.DrawRay(new Vector2(transform.position.x,transform.position.y+1), transform.TransformDirection(_movementInput) * 1f, Color.yellow); 
-               if (!Physics2D.Raycast(new Vector2(transform.position.x,transform.position.y+1), transform.TransformDirection(_movementInput), 1f))
+               RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x,transform.position.y+1), transform.TransformDirection(_movementInput), 1f);
+               // Debug.DrawRay(new Vector2(transform.position.x,transform.position.y+1), transform.TransformDirection(_movementInput) * 1f, Color.yellow); 
+               try
+               {
+                  Debug.Log("RAYCAST CONNECTED WITH: " + hit.collider.gameObject.name);
+               }
+               catch
+               {
+                  Debug.Log("RAYCAST DID NOT CONNECT!!!!!!!!!!");
+               }
+               
+               if (!hit)
                {
                   //The start move is set before anything happens to get the beginning point
                   _startMove = transform.position;
@@ -184,7 +201,7 @@ public class MovementScript : MonoBehaviour
    {
       //now the input system is all together in 2D movement
       _movementInput = inputValue.Get<Vector2>();
-      print(_movementInput);
+      print("Movement Input" +_movementInput);
       
       //ugly please fix iomg
       if (_movementInput.y == 1)

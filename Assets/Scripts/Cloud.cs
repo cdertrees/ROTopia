@@ -39,7 +39,6 @@ public class Cloud : MonoBehaviour
         //if out of bounds
         if (xpos <= leftBound || xpos >= rightBound)
         {
-            print("hgay");
             ResetCloud();
         }
         else
