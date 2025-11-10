@@ -17,7 +17,7 @@ THIS WEEK'S GOALS:
 
 HOPE:
 
- - music?
+ - music
 
 CAITLIN:
  - implementing area 3 assets
@@ -25,10 +25,11 @@ CAITLIN:
  - add animation triggers to movement script
  - fix snapping
 CONNOR:
-- edit clay Picker for the Big Wheel
+- edit Picker (in area 3 Raws)
+- edit X button
+- edit Portals
 ZACH:
-- Clay X
-- make clay Picker for the Big Wheel
+- 
 EVERYONE:
  - Portal Narratives and "diagetic features"
 	- Short stories told through portals
