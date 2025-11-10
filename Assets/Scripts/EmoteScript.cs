@@ -33,9 +33,9 @@ public class EmoteScript : MonoBehaviour
 
         if (animName != "Walk")
         {
-            if (MediaPortals.Count > 0 )
+            //I CANNOT CHECK IF THIS WORKS OR NOT UNTIL CONNOR FIX HIS CODE BUT I TRUST!!!!!!!!!!!
+            if (MediaPortals.Count > 0 && animName == "Emote0")
             {
-                
                 MediaPortals[^1].Open();
             }
             else if (NPCS.Count > 0)

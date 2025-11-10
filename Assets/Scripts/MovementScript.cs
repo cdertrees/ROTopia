@@ -44,7 +44,7 @@ public class MovementScript : MonoBehaviour
          if (_gridMoveStart && !_gridMoveCollide)
          {
             moving = true;
-            GameManager.GM.PlayerAnimate("Walk", dir);
+            
             //The thing that makes it nice and smooth
             _smoothMovement = Vector2.SmoothDamp(transform.position, _endMove, ref _smoothMovementVelocity, _speed);
             transform.position = new Vector3(_smoothMovement.x, _smoothMovement.y, _smoothMovement.y);
@@ -78,6 +78,8 @@ public class MovementScript : MonoBehaviour
                   _smoothMovement = _startMove;
                   //disable this for player to do some weird drift/jump thing :)
                   _smoothMovementVelocity = Vector2.zero;
+                  //only play animation once when walking
+                  GameManager.GM.PlayerAnimate("Walk", dir);
                   _gridMoveStart = true;
                   // Debug.Log("end move = "+_endMove);
                }
