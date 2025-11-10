@@ -55,7 +55,7 @@ public class MovementScript : MonoBehaviour
             //checks if margin is allowable for snap
             if (marginx < 0.01f && marginy < 0.01f)
             {
-               moving=false;
+               moving = false;
                _gridMoveStart = false;
                // Debug.Log("end position = "+transform.position);
                //This snaps it directly to the grid

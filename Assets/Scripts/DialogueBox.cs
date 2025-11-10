@@ -10,7 +10,7 @@ public class DialogueBox : MonoBehaviour
 {
     public TextMeshProUGUI dialogueText;
     public Image _characterPortrait;
-
+    
     public AudioSource AS;
     
     private bool _doneTyping = true;

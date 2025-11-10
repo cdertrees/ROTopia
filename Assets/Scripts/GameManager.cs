@@ -33,20 +33,16 @@ public class GameManager : MonoBehaviour
             //i am the gamemanager this is me i am now a singleton waow
             GM = this;
         }
-        
         // DontDestroyOnLoad(this.gameObject);
-        
     }
 
     private void Start()
     {
-        
         // print("THIS AFTER I MOCE pos: "+playerPos);
         if (mediaPortalScene)
         {
             ShowDialogueBox(false);
         }
-        
     }
 
     //disable player movement. this will happen whenever the player is interacting with an npc or is typing in the chat box
