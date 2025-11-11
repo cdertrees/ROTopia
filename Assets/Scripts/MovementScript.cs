@@ -74,8 +74,8 @@ public class MovementScript : MonoBehaviour
             //If movement lerping has not started yet
             if (!_gridMoveStart)
             {
-               RaycastHit2D hit = Physics2D.Raycast(new Vector2(transform.position.x,transform.position.y+1), transform.TransformDirection(_movementInput), 1f);
-               // Debug.DrawRay(new Vector2(transform.position.x,transform.position.y+1), transform.TransformDirection(_movementInput) * 1f, Color.yellow); 
+               RaycastHit2D hit = Physics2D.Raycast(moveCollider.transform.position, transform.TransformDirection(_movementInput), 1f);
+               Debug.DrawRay(moveCollider.transform.position, transform.TransformDirection(_movementInput) * 1f, Color.white); 
                try
                {
                   Debug.Log("RAYCAST CONNECTED WITH: " + hit.collider.gameObject.name);
@@ -90,7 +90,7 @@ public class MovementScript : MonoBehaviour
                   //The start move is set before anything happens to get the beginning point
                   _startMove = transform.position;
                   //The end move is calculated based on what movement input is given
-                  _endMove = new Vector2(_startMove.x+_movementInput.x,_startMove.y+_movementInput.y);
+                  _endMove = new Vector2(_startMove.x+_movementInput.x,_startMove.y+_movementInput.y/2);
                   //This is to reset all the smooth movement stuff
                   _smoothMovement = _startMove;
                   //disable this for player to do some weird drift/jump thing :)
