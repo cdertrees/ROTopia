@@ -24,12 +24,13 @@ public class MovementScript : MonoBehaviour
    //'U', 'D', 'L', 'R'
    private char dir;
    
-   private void Awake()
+   private void Start()
    {
       Application.targetFrameRate = 60;
       //This is to keep it all private lol lmao even
       _playerRigidbody = GetComponent<Rigidbody2D>();
       transform.position = PlayerInfo.playerPos;
+      print("I am at " + transform.position);
    }
 
    public float marginx;

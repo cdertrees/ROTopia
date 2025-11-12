@@ -18,7 +18,11 @@ public class GameManager : MonoBehaviour
     public MovementScript movementScript;
     public EmoteScript emoteScript;
     public DialogueBox dialogueScript;
-
+    public PlayerInfo playerInfoScript;
+    
+    //The player position that the player should start at
+    public Vector3 scenePlayerPos;
+    
     public bool mediaPortalScene;
     
     private void Awake()
@@ -34,6 +38,10 @@ public class GameManager : MonoBehaviour
             GM = this;
         }
         // DontDestroyOnLoad(this.gameObject);
+        print("should be at this position:"+scenePlayerPos);
+        playerInfoScript.SetPlayerPos(scenePlayerPos);
+        print("trying to set at" + PlayerInfo.playerPos);
+        
     }
 
     private void Start()
@@ -43,6 +51,10 @@ public class GameManager : MonoBehaviour
         {
             ShowDialogueBox(false);
         }
+        
+     
+        
+
     }
 
     //disable player movement. this will happen whenever the player is interacting with an npc or is typing in the chat box

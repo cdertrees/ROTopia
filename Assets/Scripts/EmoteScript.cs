@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EmoteScript : MonoBehaviour
 {
-    private Animator _emoteAnim;
+    public Animator _emoteAnim;
 
     //NPCS in range of the player
     public List<NPCScript> NPCS;
@@ -16,6 +16,7 @@ public class EmoteScript : MonoBehaviour
     {
         // player = GetComponentInParent<MovementScript>().gameObject;
         _emoteAnim = GetComponent<Animator>();
+        
     }
 
     //When the player enters an emote that exists into the chatbox, this function is called
@@ -27,7 +28,17 @@ public class EmoteScript : MonoBehaviour
     public void Emote(String animName, char direction)
     {
         var fullname = animName + direction;
-        _emoteAnim.Play(fullname);
+        print(fullname);
+        try
+        {
+            print(_emoteAnim);
+            _emoteAnim.Play(fullname);
+        }
+        catch 
+        {
+           print("Did not run animation "+ fullname);
+        }
+        
         
         // last npc added to radius (hopefully the closest one) will be called to respond to the player. 
 
