@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EmoteScript : MonoBehaviour
@@ -28,16 +29,17 @@ public class EmoteScript : MonoBehaviour
     public void Emote(String animName, char direction)
     {
         var fullname = animName + direction;
-        print(fullname);
         try
         {
-            print(_emoteAnim);
             _emoteAnim.Play(fullname);
         }
         catch 
         {
-           print("Did not run animation "+ fullname);
+            Debug.Log("Unable to play animation: " + fullname);
+          
         }
+        
+      
         
         
         // last npc added to radius (hopefully the closest one) will be called to respond to the player. 
