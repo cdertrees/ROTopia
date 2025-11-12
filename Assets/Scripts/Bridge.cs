@@ -11,6 +11,7 @@ public class Bridge : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             SceneManager.LoadScene(nextScene);
+            PlayerInfo.comingFromMediaPortal = false;
         }
     }
 }
