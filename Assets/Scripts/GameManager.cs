@@ -20,8 +20,9 @@ public class GameManager : MonoBehaviour
     public DialogueBox dialogueScript;
     public PlayerInfo playerInfoScript;
     
-    //The player position that the player should start at
+    //The player position that the player should start at UNLESS coming from a media portal
     public Vector3 scenePlayerPos;
+    public Vector3 fromPortalPlayerPos;
     
     public bool mediaPortalScene;
     
@@ -37,11 +38,21 @@ public class GameManager : MonoBehaviour
             //i am the gamemanager this is me i am now a singleton waow
             GM = this;
         }
-        // DontDestroyOnLoad(this.gameObject);
-        print("should be at this position:"+scenePlayerPos);
-        playerInfoScript.SetPlayerPos(scenePlayerPos);
-        print("trying to set at" + PlayerInfo.playerPos);
         
+        //DontDestroyOnLoad(this.gameObject);
+        if (!PlayerInfo.comingFromMediaPortal)
+        {
+            print("should be at this position:"+scenePlayerPos);
+            playerInfoScript.SetPlayerPos(scenePlayerPos, false);
+            print("trying to set at" + PlayerInfo.playerPos);
+        }
+        else
+        {
+            
+        }
+           
+            
+       
     }
 
     private void Start()

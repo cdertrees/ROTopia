@@ -10,7 +10,7 @@ public class MediaPortal : MonoBehaviour
 
     public void Open()
     {
-        playerInfo.SetPlayerPos(playerInfo.transform.position);
+        playerInfo.SetPlayerPos(playerInfo.transform.position, true);
         SceneManager.LoadScene(_scene);
   
     }
