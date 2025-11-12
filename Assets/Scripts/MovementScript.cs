@@ -74,7 +74,8 @@ public class MovementScript : MonoBehaviour
             //If movement lerping has not started yet
             if (!_gridMoveStart)
             {
-               RaycastHit2D hit = Physics2D.Raycast(moveCollider.transform.position, transform.TransformDirection(_movementInput), 1f);
+               LayerMask mask = LayerMask.GetMask("Environment");
+               RaycastHit2D hit = Physics2D.Raycast(moveCollider.transform.position, transform.TransformDirection(_movementInput), 1f, mask);
                Debug.DrawRay(moveCollider.transform.position, transform.TransformDirection(_movementInput) * 1f, Color.white); 
                try
                {
