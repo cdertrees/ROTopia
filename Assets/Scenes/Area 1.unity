@@ -3213,6 +3213,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5511239924695072965, guid: d884dfaaf61323547a860d3c988f4907, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5511239924695072965, guid: d884dfaaf61323547a860d3c988f4907, type: 3}
       propertyPath: m_TagString
       value: Untagged
       objectReference: {fileID: 0}
@@ -3374,11 +3378,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2387442282048691966, guid: 9fde34ce0ffafaf4e88205a3d4f2798d, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2387442282048691966, guid: 9fde34ce0ffafaf4e88205a3d4f2798d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2869411422328938365, guid: 9fde34ce0ffafaf4e88205a3d4f2798d, type: 3}
       propertyPath: m_Pivot.x
@@ -3470,11 +3474,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5077377162658394442, guid: 9fde34ce0ffafaf4e88205a3d4f2798d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5927790099112198545, guid: 9fde34ce0ffafaf4e88205a3d4f2798d, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 49.07
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5927790099112198545, guid: 9fde34ce0ffafaf4e88205a3d4f2798d, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3641,6 +3645,22 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3986855523687554269, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 051969a597352f943ab5af0a710208e4, type: 2}
+    - target: {fileID: 4105664416006655651, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105664416006655651, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+      propertyPath: m_VolumeLayerMask.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105664416006655651, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+      propertyPath: m_VolumeFrameworkUpdateModeOption
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4162319116262934329, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -3663,7 +3683,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6650505447914274967, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
       propertyPath: m_Radius
-      value: 25
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 6650505447914274967, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
       propertyPath: m_Enabled
@@ -3765,8 +3785,33 @@ PrefabInstance:
     m_RemovedGameObjects:
     - {fileID: 1243494965931028292, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 58759310250286417, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7198541761714621833}
   m_SourcePrefab: {fileID: 100100000, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+--- !u!1 &7198541761714621832 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 58759310250286417, guid: 78f1cc5c135a4bf4e9e30e8e79e40048, type: 3}
+  m_PrefabInstance: {fileID: 7198541761714621831}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7198541761714621833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7198541761714621832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 3f9215ea0144899419cfbc0957140d3f, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

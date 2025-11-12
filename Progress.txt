@@ -20,10 +20,9 @@ HOPE:
  - music
 
 CAITLIN:
- - implementing area 3 assets
- - re-implement are 2 floor
- - add animation triggers to movement script
- - fix snapping
+- Implement clay X button and media portal sprite
+- Make bridges store player position
+
 CONNOR:
 - edit Picker (in area 3 Raws)
 - edit X button
@@ -37,6 +36,10 @@ EVERYONE:
 	- Short stories told through portals
 
 DONE 8-): 
+ - implementing area 3 assets
+ - re-implement are 2 floor
+ - add animation triggers to movement script
+ - fix snapping
  - Make animation system accommodate 4 directions of dance
  - add valentine schlibby
  - add floor area 2 (waitin on connor)
