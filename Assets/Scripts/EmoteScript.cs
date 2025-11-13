@@ -85,7 +85,7 @@ public class EmoteScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print("interact");
+       
         //If an npc enters the emote radius, add them to the npc list
         if (other.gameObject.CompareTag("NPC"))
         {
@@ -100,7 +100,7 @@ public class EmoteScript : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        print("interact");
+        
         //remove npc if they exit the radius
         if (other.gameObject.CompareTag("NPC"))
         {
