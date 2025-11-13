@@ -10,7 +10,9 @@ public class EmoteScript : MonoBehaviour
     //NPCS in range of the player
     public List<NPCScript> NPCS;
     public List<MediaPortal> MediaPortals;
-    
+
+    //Selector of the closest portal or npc!
+    public GameObject currentlySelected = null;
     // private GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -58,9 +60,32 @@ public class EmoteScript : MonoBehaviour
         }
         
     }
-    
+
+
+    void ReevaluateSelector()
+    {
+        //if currently selected can be reached, hide that shit
+        if (currentlySelected)
+        {
+            currentlySelected.SetActive(false);
+        }
+        
+        
+        //check if we are in range of anything "selectable"
+        if (MediaPortals.Count > 0)
+        {
+            //MediaPortals[^1].Open();
+            //Find out which should be prioritized
+            currentlySelected = MediaPortals[^1].selectedIcon;
+            //show the new selector
+            currentlySelected.SetActive(true);
+        }
+        
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
+        print("interact");
         //If an npc enters the emote radius, add them to the npc list
         if (other.gameObject.CompareTag("NPC"))
         {
@@ -70,10 +95,12 @@ public class EmoteScript : MonoBehaviour
         {
             MediaPortals.Add(other.GetComponent<MediaPortal>());
         }
+        ReevaluateSelector();
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        print("interact");
         //remove npc if they exit the radius
         if (other.gameObject.CompareTag("NPC"))
         {
@@ -83,5 +110,6 @@ public class EmoteScript : MonoBehaviour
         {
             MediaPortals.Remove(other.GetComponent<MediaPortal>());
         }
+        ReevaluateSelector();
     }
 }

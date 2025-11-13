@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 4784286014780398426}
   - component: {fileID: 6605178888105349419}
   - component: {fileID: 2086660298787083955}
-  m_Layer: 2
+  - component: {fileID: 555175032540128678}
+  m_Layer: 0
   m_Name: Player Sprite & Emote Script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -106,7 +107,7 @@ CircleCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -127,8 +128,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 35
+  m_Offset: {x: -0.5189932, y: 0}
+  m_Radius: 18.288395
 --- !u!114 &6605178888105349419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -141,8 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7fcf0b2b510ad48893345f019d2d49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EmoteScript
+  _emoteAnim: {fileID: 0}
   NPCS: []
   MediaPortals: []
+  currentlySelected: {fileID: 0}
 --- !u!95 &2086660298787083955
 Animator:
   serializedVersion: 7
@@ -165,6 +168,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &555175032540128678
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3037265646072641539}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 7
 --- !u!1 &4395419700848884232
 GameObject:
   m_ObjectHideFlags: 0
@@ -412,7 +442,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4294967295
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -429,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2c50187438497a4fb74c07eae19aa64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  _speed: 0.3
+  _speed: 0.1
   moveCollider: {fileID: 818144507326603763}
   marginx: 0
   marginy: 0
@@ -521,7 +551,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 8778631882800595209, guid: 7dd182e0b23d794418d71570cec635ca, type: 2}
+  - {fileID: 8778631882800595209, guid: 0e9cd6219278f2e449eee627da54a5a8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -566,8 +596,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Terrabite
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 7dd182e0b23d794418d71570cec635ca, type: 2}
-  m_sharedMaterial: {fileID: 8778631882800595209, guid: 7dd182e0b23d794418d71570cec635ca, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 0e9cd6219278f2e449eee627da54a5a8, type: 2}
+  m_sharedMaterial: {fileID: 8778631882800595209, guid: 0e9cd6219278f2e449eee627da54a5a8, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
