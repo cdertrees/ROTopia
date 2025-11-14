@@ -24,13 +24,10 @@ CAITLIN:
 - Make bridges store player position
 
 CONNOR:
-- edit Picker (in area 3 Raws)
-- edit X button
-- edit Portals
-- Edit Market Stall 2
-- Edit Market Stall 3
+- Skew Area 3 Floor
+- Edit Areas 1, 2, and 3 Bridges
 ZACH:
-- Refactor team to lean out of NPCs/interactibles and into Portals
+
 EVERYONE:
  - Portal Narratives and "diagetic features"
 	- Short stories told through portals
