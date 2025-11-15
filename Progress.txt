@@ -20,9 +20,7 @@ HOPE:
  - music
 
 CAITLIN:
-- Implement clay X button and media portal sprite
-- Make bridges store player position
-
+- Implement Area transitions
 CONNOR:
 - Skew Area 3 Floor
 - Edit Areas 1, 2, and 3 Bridges
