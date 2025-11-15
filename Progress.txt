@@ -22,11 +22,9 @@ HOPE:
 CAITLIN:
 - Implement Area transitions
 CONNOR:
-- Skew Area 3 Floor
-- Edit Areas 1, 2, and 3 Bridges
 - Animate Area 2 Tiles
 ZACH:
-
+ - CORE PORTALS (CORTALS)
 EVERYONE:
  - Portal Narratives and "diagetic features"
 	- Short stories told through portals
