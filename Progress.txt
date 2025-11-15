@@ -26,6 +26,7 @@ CAITLIN:
 CONNOR:
 - Skew Area 3 Floor
 - Edit Areas 1, 2, and 3 Bridges
+- Animate Area 2 Tiles
 ZACH:
 
 EVERYONE:
