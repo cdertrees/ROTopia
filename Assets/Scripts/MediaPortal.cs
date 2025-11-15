@@ -4,8 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class MediaPortal : MonoBehaviour
 {
+    //scene i am going to
     [SerializeField] private String _scene;
+    
+    //script holding important info abt player
     public PlayerInfo playerInfo;
+    
+    //selection arrow showing the player what portal is selected
     public GameObject selectedIcon;
     
 
