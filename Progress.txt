@@ -20,8 +20,10 @@ HOPE:
  - music
 
 CAITLIN:
-- Implement Area transitions
-- Implement Portal Grey-Out
+- Implement Area animation transitions (screen burn) & timer for opening portal
+- Implement Portal Grey-OutS
+- Implement different emote open portal, portal colors set by this
+
 CONNOR:
 - Animate Area 2 Tiles
 ZACH:

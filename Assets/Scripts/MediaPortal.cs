@@ -6,7 +6,8 @@ public class MediaPortal : MonoBehaviour
 {
     //scene i am going to
     [SerializeField] private String _scene;
-    
+
+    public bool takesPoobis, takesSchlibby, takesMarmadizzle;
     //script holding important info abt player
     public PlayerInfo playerInfo;
     
