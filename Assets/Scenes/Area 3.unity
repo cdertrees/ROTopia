@@ -2992,8 +2992,6 @@ MonoBehaviour:
   emoteScript: {fileID: 0}
   dialogueScript: {fileID: 1753758459}
   playerInfoScript: {fileID: 0}
-  scenePlayerPos: {x: 0, y: 0, z: 0}
-  fromPortalPlayerPos: {x: 0, y: 0, z: 0}
   mediaPortalScene: 0
 --- !u!1 &1487952195
 GameObject:
@@ -3486,7 +3484,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &2071962812
 SpriteRenderer:
   m_ObjectHideFlags: 0
