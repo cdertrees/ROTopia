@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Area 2.unity
     guid: 37b4e0efb85231f4c845f834f509974d
   - enabled: 1
-    path: Assets/Scenes/Media Portal/MediaPortalTest.unity
+    path: Assets/Scenes/Media Portal/MediaPortalTemplate.unity
     guid: db84e015c0d1a6847a97567f6aa9ec36
   - enabled: 1
     path: Assets/Scenes/Area 3.unity
