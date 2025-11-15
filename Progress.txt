@@ -21,10 +21,12 @@ HOPE:
 
 CAITLIN:
 - Implement Area transitions
+- Implement Portal Grey-Out
 CONNOR:
 - Animate Area 2 Tiles
 ZACH:
  - CORE PORTALS (CORTALS)
+ - Specify Add'l Portals and characters
 EVERYONE:
  - Portal Narratives and "diagetic features"
 	- Short stories told through portals
