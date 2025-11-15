@@ -3077,6 +3077,7 @@ GameObject:
   m_Component:
   - component: {fileID: 816926855}
   - component: {fileID: 816926854}
+  - component: {fileID: 816926856}
   m_Layer: 0
   m_Name: Floor
   m_TagString: Untagged
@@ -3161,6 +3162,48 @@ Transform:
   - {fileID: 1832170485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &816926856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 816926853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbd55cffeb3d09c48bbeb03449e06d43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TileSwap
+  colors:
+  - {fileID: 2100000, guid: 151408be6b6d91845b06e5f16f9de60f, type: 2}
+  - {fileID: 2100000, guid: 99a54816f9d854544a9e6cda07f0b297, type: 2}
+  tiles:
+  - {fileID: 1315411071}
+  - {fileID: 1836670785}
+  - {fileID: 567187323}
+  - {fileID: 256211873}
+  - {fileID: 769772440}
+  - {fileID: 1195472714}
+  - {fileID: 359102536}
+  - {fileID: 1386091288}
+  - {fileID: 202472916}
+  - {fileID: 2094332130}
+  - {fileID: 125477341}
+  - {fileID: 1178615774}
+  - {fileID: 1566573564}
+  - {fileID: 352561599}
+  - {fileID: 1914076580}
+  - {fileID: 1658797192}
+  - {fileID: 1181190805}
+  - {fileID: 1810989175}
+  - {fileID: 1186651261}
+  - {fileID: 617969204}
+  - {fileID: 1504439556}
+  - {fileID: 640772845}
+  - {fileID: 1393959794}
+  - {fileID: 69149592}
+  timer: 0
+  waittime: 1
 --- !u!1001 &843073752
 PrefabInstance:
   m_ObjectHideFlags: 0
