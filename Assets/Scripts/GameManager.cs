@@ -21,10 +21,11 @@ public class GameManager : MonoBehaviour
     public PlayerInfo playerInfoScript;
     
     //The player position that the player should start at UNLESS coming from a media portal
-    public Vector3 scenePlayerPos;
-    public Vector3 fromPortalPlayerPos;
-    
+    public static Vector3 scenePlayerPos = new Vector3(0f, -2.25f, 0f);
     public bool mediaPortalScene;
+
+    // //position that the player should start at in the scene if they are coming off of a bridge
+    // public Vector3 bridgeEnteredPosition;
     
     private void Awake()
     {
